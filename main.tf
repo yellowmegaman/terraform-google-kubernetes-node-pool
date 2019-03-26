@@ -1,6 +1,6 @@
 resource "google_container_node_pool" "gke-nodes" {
   name               = "${var.name}nodes"
-  region             = "${var.zone}"
+  location           = "${var.zone}"
   cluster            = "${var.cluster_name}"
   initial_node_count = "${var.initial_node_count}"
   autoscaling {
