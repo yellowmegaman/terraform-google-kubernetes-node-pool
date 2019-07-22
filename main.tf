@@ -15,7 +15,7 @@ resource "google_container_node_pool" "gke-nodes" {
   node_config {
     disk_type    = var.disk_type
     disk_size_gb = var.disk_size
-    metadata {
+    metadata = {
       disable-legacy-endpoints = "true"
     }
     preemptible  = var.preemptible
