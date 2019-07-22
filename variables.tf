@@ -27,8 +27,13 @@ variable "max_node_count" {
 }
 variable "auto_repair" {
 	default     = "true"
-	description = "GKE node pool management"
+	description = "GKE node pool management auto repair"
 }
+variable "auto_upgrade" {
+        default     = "true"
+        description = "GKE node pool management auto upgrade"
+}
+
 variable "network_tags" {
 	default     = ["ssh-wan"]
 	description = "Nodes network tags"
